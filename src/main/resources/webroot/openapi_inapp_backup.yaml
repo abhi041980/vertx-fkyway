@@ -1,0 +1,131 @@
+---
+
+openapi: 3.0.0  
+info:
+  title: InApp API
+  description: Hong Leong InApp Api(Powered By COE)
+  version: 1.0.0
+paths:
+  /notification/sendSMS:
+    post:
+      x-vertx-event-bus:
+       address: sms.service
+       timeout: 1000
+       method: sendSMS
+      summary: Send SMS
+      parameters:
+          - in: header
+            name: X-CLIENT-ID
+            schema:
+              type: string
+            required: true
+          - in: header
+            name: X-CHANNEL
+            schema:
+              type: string
+            required: true 
+      tags:
+        - SMS
+      operationId: sendSMS
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendSMSResquest'
+        required: true
+      responses:
+        200:
+          description: Send SMS success fully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendSMSResponse'
+  /notification/sendPush:
+    post:
+      x-vertx-event-bus:
+       address: push.service
+       timeout: 60000
+       method: sendPush
+      summary: Send Push
+      parameters:
+          - in: header
+            name: X-CLIENT-ID
+            schema:
+              type: string
+            required: true
+          - in: header
+            name: X-CHANNEL
+            schema:
+              type: string
+            required: true
+      tags:
+        - Push
+      operationId: sendPush
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PushNotificationRequest'
+        required: true
+      responses:
+        200:
+          description: Send Push success fully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PushNotificationResponse'             
+                                                                     
+components:
+  schemas:       
+    SendSMSResponse:  
+      properties:
+       responseCode:
+          type: string
+       responseMessage:
+          type: string  
+       messageId:
+          type: string    
+
+    SendSMSResquest:
+     required:
+      - channel
+      - cif
+      - text
+     properties:
+        channel:
+          type: string
+        cif:
+          type: string 
+        text:
+          type: string  
+      
+    PushNotificationResponse:
+      properties:
+       responseCode:
+          type: string
+       responseMessage:
+          type: string 
+       messageId:
+          type: string  
+    PushNotificationRequest:
+     required:
+      - channel
+      - cif
+      - text
+     properties:
+        channel:
+          type: string
+        cif:
+          type: string 
+        text:
+          type: string  
+        fallbackWithSms:
+          type: boolean                              
+                        
+  securitySchemes:
+   ApiKey:
+    type: apiKey
+    name: Authorization
+    in: header           
+          
+   

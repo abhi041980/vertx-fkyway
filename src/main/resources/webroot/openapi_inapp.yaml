@@ -1,0 +1,1521 @@
+---
+openapi: 3.0.0  
+info:
+  title: fightitaway API
+  description: fightitaway
+  version: 1.0.0
+paths:
+  /profile:
+    get:
+      summary: Get Profile
+      security:
+        - ApiKey: []
+      tags:
+        - profile
+      operationId: profile
+      responses:
+        200:
+          description: get Profile success fully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /authenticate:
+    get:
+      summary: Get Profile
+      tags:
+        - authenticate
+      operationId: authenticate
+      parameters:
+        - in: query
+          name: access_token
+          schema:
+            type: string
+      responses:
+        200:
+          description: get Profile success fully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'  
+
+  /defaultDetail:
+    get:
+      summary: Default Deatil
+      security:
+        - ApiKey: []
+      tags:
+        - Default Detail
+      operationId: getDefaultDetail
+      responses:
+        200:
+          description: get default
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /defaultDetailOld:
+    get:
+      summary: Default Deatil
+      tags:
+        - Default Detail
+      operationId: getDefaultDetailOld
+      responses:
+        200:
+          description: get default
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /getCouponList:
+    get:
+      summary: getCoupon List
+      tags:
+        - Default Detail
+      operationId: getCouponList
+      responses:
+        200:
+          description: get default
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+  /habitMaster:
+    post:
+      summary: LinkDevice 
+      security:
+        - ApiKey: []
+      tags:
+        - Master
+      operationId: createHabit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HabitDetail'
+        required: true
+      responses:
+        200:
+          description: Send Push successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+    get:
+      summary: get Habits  
+      security:
+        - ApiKey: []
+      tags:
+        - Master
+      operationId: getHabit
+      responses:
+        200:
+          description: Send Push successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'            
+
+  /dietPlans:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlans
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+
+  /v2/dietPlans:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlansV2
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /v3/dietPlans:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlansV3
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /v1/intlDietPlans:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: intlDietPlans
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  
+
+  /v2/dietPlans/options:
+    get:
+      summary: Get for Option
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlanForOption
+      parameters:
+        - in: query
+          name: slot
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'                           
+
+  /updateDemographic:
+    post:
+      summary: Update Demographic
+      security:
+        - ApiKey: []
+      tags:
+        - Demographic
+      operationId: updateDemographic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DemographicRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /updateLifeStyle:
+    post:
+      summary: Update LifeStyle
+      security:
+        - ApiKey: []
+      tags:
+        - UpdateLifeStyle
+      operationId: updateLifeStyle
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LifestyleRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /updateDiet:
+    post:
+      summary: Update Diet
+      security:
+        - ApiKey: []
+      tags:
+        - UpdateDiet
+      operationId: updateDiet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DietRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /customer/createDiet:
+    post:
+      summary: Create Diet
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: createCustomerDiet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustmerDietRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+
+  /customer/diets:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: getCustomerDiets
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /customer/createHabit:
+    post:
+      summary: Create Habit for customer
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: createCustomerHabit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustmerHabitRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /customer/updateHabit:
+    post:
+      summary: Create Habit for customer
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: updateCustomerHabit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomerHabitRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+
+  /customer/deleteCustomerHabit:
+    post:
+      summary: Delete Customer Habit
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: deleteCustomerHabit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeleteCustomerHabitRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse' 
+  /customer/updateWeight:
+    post:
+      summary: Update CustomerWeight
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: updateCustomerWeight
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustomerWeightRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+                
+  /customer/addDietPref:
+    post:
+      summary: "addDietPref"
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: addCustDietPref
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustDietPrefRequest'
+      responses:
+        200:
+          description: Add DietPref
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /customer/v2/addDietPref:
+    post:
+      summary: "addDietPref"
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: addCustDietPrefV2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCustDietPrefRequestV2'
+      responses:
+        200:
+          description: Add DietPref
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'                                                          
+                              
+  /customer/getDietPref:
+    get:
+      summary: Get DietPlans
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: getCustDietPref
+      responses:
+        200:
+          description: Get Diet Pref
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /customer/returnDietPlansV3:
+    get:
+      summary: Get DietPlans v3
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: returnDietPlansV3Cache
+      responses:
+        200:
+          description: Get Diet Pref v3
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+  /customer/habits:
+    get:
+      summary: Get Habit data
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: getCustomerHabit
+      responses:
+        200:
+          description: Get getCustomerHabit
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /customer/currentWeight:
+    get:
+      summary: Get Habit data
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: getCustomerCurrentWeight
+      responses:
+        200:
+          description: Get currentWeight
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  /customer/weightGraphData:
+    get:
+      summary: Get Habit data
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: getCustomerWeightGrphData
+      responses:
+        200:
+          description: Get currentWeight
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'                             
+                
+  /customer/habitsForUpdate:
+    get:
+      summary: Get Habit data
+      security:
+        - ApiKey: []
+      tags:
+        - Customer
+      operationId: habitsForUpdate
+      responses:
+        200:
+          description: Get habitsForUpdate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+  /payment:
+    post:
+      summary: Create Habit for customer
+      security:
+        - ApiKey: []
+      tags:
+        - Payment
+      operationId: createOrder
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayemntRequest'
+        required: true
+      responses:
+        200:
+          description:  success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /payment/confirm:
+    post:
+      summary: Create Habit for customer
+      security:
+        - ApiKey: []
+      tags:
+        - Payment
+      operationId: confirmPayment
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConfirmRequest'
+        required: true
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'
+  /payment/cancelPlan:
+    post:
+      summary: Refund payment
+      security:
+        - ApiKey: []
+      tags:
+        - Payment
+      operationId: refundPayment
+      responses:
+        200:
+          description: success fully response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendResponse'              
+  /defaultCustDetail:
+    get:
+      summary: Get Customer Diet Details on Edit 'Diet'  
+      security:
+        - ApiKey: []
+      tags:
+        - Customer Detail
+      operationId: getCustDietDetailsOnEdit
+      responses:
+        200:
+          description: get cust diet details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'                                      
+
+  /customer/dietPlanTimings:
+    get:
+      summary: Get DietPlans timings
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: getDietPlanTimings
+      responses:
+        200:
+          description: Get DietPlans timings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+                                      
+
+  /customer/sendEmail:
+    post:
+      summary: Send Email to Customer and Admin
+      security:
+        - ApiKey: []
+      tags:
+        - SendEmail
+      operationId: sendEmail
+      responses:
+        200:
+          description: Send Email to Customer and Admin
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendEmail'
+                
+  /dashboard:
+    get:
+      summary: Get Admin Dashboard
+      security:
+        - ApiKey: []
+      tags:
+        - SendEmail
+      operationId: dashboard
+      responses:
+        200:
+          description: Get Admin Dashboard
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /cacheddata:
+    get:
+      summary: Get Diet Plans Cache data
+      tags:
+        - SendEmail
+      operationId: cacheddata
+      responses:
+        200:
+          description: Get Diet Plans Cache data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+  
+  /addTnC:
+    post:
+      summary: Add/Get TnC
+      security:
+        - ApiKey: []
+      tags:
+        - tnc
+      operationId: addTnC
+      responses:
+        200:
+          description: add/get terms and conditions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+                
+  /customer/profile/remove:
+    get:
+      summary: Remove Customer Profile and respective data from tables
+      security:
+        - ApiKey: []
+      tags:
+        - removeProfile
+      operationId: profileRemove
+      responses:
+        200:
+          description: Remove Customer Profile and respective data from tables
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+                
+  /customer/getOnePlan:
+    get:
+      summary: Get customer one subscription plan
+      security:
+        - ApiKey: []
+      tags:
+        - removeProfile
+      operationId: getOnePlan
+      responses:
+        200:
+          description: Get customer one subscription plan
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'     
+
+  /customer/subscribePlanByCoupon:
+     post:
+      summary: Update coupon details post login
+      security:
+        - ApiKey: []
+      tags:
+        - tnc
+      operationId: subscribePlanByCoupon
+      responses:
+        200:
+          description: Update coupon details post login
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                    
+  /fetch/food:
+    post:
+      summary: Fetch Food Item
+      security:
+        - ApiKey: []
+      tags:
+        - fetchfood
+      operationId: fetchFood
+      responses:
+        200:
+          description: Fetch Food Item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+  /customer/calories/burnt:
+     post:
+      summary: Customer calories burnt
+      security:
+        - ApiKey: []
+      tags:
+        - caloriesburnt
+      operationId: saveCustCaloriesBurnt
+      responses:
+        200:
+          description: Customer calories burnt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                      
+  /water/tips:
+    get:
+      summary: Customer water tips
+      tags:
+        - watertips
+      operationId: waterTips
+      responses:
+        200:
+          description: Customer water tips
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'        
+ 
+  /customer/water/drank:
+     post:
+      summary: Customer calories burnt
+      security:
+        - ApiKey: []
+      tags:
+        - waterdrank
+      operationId: saveWaterDrank
+      responses:
+        200:
+          description: Customer calories burnt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'   
+ 
+  /customer/fetch/water/drank:
+     post:
+      summary: Customer water drank
+      security:
+        - ApiKey: []
+      tags:
+        - waterdrank
+      operationId: fetchWaterDrank
+      responses:
+        200:
+          description: Customer calories burnt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+               
+  /customer/water/recommendation:
+    get:
+      summary: Customer water Recommendations
+      security:
+        - ApiKey: []
+      tags:
+        - waterrecommendation
+      operationId: waterRecommendation
+      responses:
+        200:
+          description: Customer water Recommendations      
+ 
+  /customer/water/reminder:
+     post:
+      summary: Customer water reminder ie activate/deactivate
+      security:
+        - ApiKey: []
+      tags:
+        - waterdrank
+      operationId: saveWaterReminder
+      responses:
+        200:
+          description: Customer water reminder ie activate/deactivate
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+                
+  /fetch/water/reminder:
+    get:
+      summary: Customer water reminder
+      security:
+        - ApiKey: []
+      tags:
+        - fetchWaterReminder
+      operationId: fetchWaterReminder
+      responses:
+        200:
+          description: Customer water reminder  
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'   
+
+  /selective/details:
+    get:
+      summary: Selective Details
+      security:
+        - ApiKey: []
+      tags:
+        - Default Detail
+      operationId: getSpecificDetailsByCommunity
+      responses:
+        200:
+          description: Selective Details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+ 
+  /fetch/calories/history:
+     get:
+      summary: fetch Date and calories
+      security:
+        - ApiKey: []
+      tags:
+        - fetchcalories
+      operationId: fetchCaloriesHistory
+      responses:
+        200:
+          description: fetch Date and calories
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+ 
+  /fetch/target/calories:
+     get:
+      summary: fetch Target calories
+      security:
+        - ApiKey: []
+      tags:
+        - fetchtargetcalories
+      operationId: fetchTargetCalories
+      responses:
+        200:
+          description: fetch Target calories
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+ 
+
+  /dietPlan/refresh/option:
+    post:
+      summary: Get for Option
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlanRefreshOption
+      parameters:
+        - in: query
+          name: slot
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Get DietPlans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+      
+             
+  /customer/analytics:
+    get:
+      summary: Get Customer analytics
+      tags:
+        - Get customer analytics
+      operationId: getCustAnalytics
+      responses:
+        200:
+          description: Get Customer analytics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+ 
+  /refresh/foods:
+     get:
+      summary: Refresh food items
+      security:
+        - ApiKey: []
+      tags:
+        - refreshFoods
+      operationId: refreshFoods
+      responses:
+        200:
+          description: refresh food items
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /customer/payment/analytics:
+    get:
+      summary: Get Customer Payment analytics
+      tags:
+        - Get customer payment analytics
+      operationId: getCustPaymentAnalytics
+      responses:
+        200:
+          description: Get Customer payment analytics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /customer/dietplan/cache/analytics:
+    get:
+      summary: Get Customer dietplan cache analytics
+      tags:
+        - Get customer dietplan cache analytics
+      operationId: getDietPlanCacheAnalytics
+      responses:
+        200:
+          description: Get Customer dietplan cache analytics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /download/customer/dietplan/cache/analytics:
+    get:
+      summary: Download Customer dietplan cache analytics
+      tags:
+        - Download customer dietplan cache analytics
+      operationId: downloadDietPlanCacheAnalytics
+      responses:
+        200:
+          description: Download Customer dietplan cache analytics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'    
+
+  /createEmptyProfile:
+    get:
+      summary: Create empty Profile
+      tags:
+        - Create empty Profile
+      operationId: createEmptyProfile
+      responses:
+        200:
+          description: Create empty Profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+
+  /save/dietPlan/timings:
+    post:
+      summary: Save dietplan times
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: saveOrUpdateCustomerDietPlanTimings
+      responses:
+        200:
+          description: Save dietplan times
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendEmail'
+                
+  /dietPlan/save/time:
+    post:
+      summary: persist time
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: dietPlanSaveTime
+      responses:
+        200:
+          description: Save diet plan time
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse' 
+                
+  /fetch/pending/customers:
+    get:
+      summary: Fetch pending customers
+      tags:
+        - Fetch and update plan
+      operationId: fetchPendingCust
+      responses:
+        200:
+          description: Fetch pending customers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /fetch/save/customers:
+    get:
+      summary: Fetch save customers
+      tags:
+        - Fetch and save customers
+      operationId: fetchnSaveCust
+      responses:
+        200:
+          description: Fetch save customers
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /saveupdate/detox/dietPlan/status:
+    post:
+      summary: Save detox dietplan status 
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: saveDetoxDietplanStatus
+      responses:
+        200:
+          description: Save detox dietplan status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /fetch/help:
+    get:
+      summary: Fetch help categories
+      security:
+        - ApiKey: []
+      tags:
+        - Fetch and save customers
+      operationId: fetchHelp
+      responses:
+        200:
+          description: Fetch help categories
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /fetch/dietplans:
+    get:
+      summary: Fetch dietplans
+      security:
+        - ApiKey: []
+      tags:
+        - Fetch dietplans
+      operationId: fetchDietPlans
+      responses:
+        200:
+          description: Fetch dietplans
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /fetch/payment/details:
+    get:
+      summary: Fetch payment details
+      security:
+        - ApiKey: []
+      tags:
+        - Fetch payment details
+      operationId: getCustPaymentDetails
+      responses:
+        200:
+          description: Fetch payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /fetch/cust/subscription/details:
+    get:
+      summary: Fetch add customers details
+      tags:
+        - Fetch all customers details
+      operationId: fetchAllCustomersDetails
+      responses:
+        200:
+          description: Fetch all customers details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+  /saveupdate/detox/default/days:
+    post:
+      summary: Save/Update detox default days 
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: saveDetoxDefaultDays
+      responses:
+        200:
+          description: Save/Update detox default days
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+
+  /update/payment/details:
+    post:
+      summary: Update payment details 
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: updatePaymentDetails
+      responses:
+        200:
+          description: Update payment details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /update/target/weight:
+    post:
+      summary: Update target weight
+      security:
+        - ApiKey: []
+      tags:
+        - TragetWeight
+      operationId: updateTargetWeight
+      responses:
+        200:
+          description: Update target weight
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /update/current/weight:
+    post:
+      summary: Update current weight
+      security:
+        - ApiKey: []
+      tags:
+        - CurrentWight
+      operationId: updateCurrentWeight
+      responses:
+        200:
+          description: Update current weight
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                     
+  /saveOrUpdate/cust/survey:
+    post:
+      summary: Save customer survey
+      security:
+        - ApiKey: []
+      tags:
+        - SaveCustSurvey
+      operationId: saveOrUpdateCustSurvey
+      responses:
+        200:
+          description: Save Customer Survey
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+                
+  /update/cust/mobile:
+    post:
+      summary: Update customer mobile
+      security:
+        - ApiKey: []
+      tags:
+        - UpdateCustCommunicationNo
+      operationId: updateCustMobile
+      responses:
+        200:
+          description: Update Customer mobile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'                                     
+
+  /fetch/dietPlan/timings:
+    get:
+      summary: Fetch DietPlans timings
+      security:
+        - ApiKey: []
+      tags:
+        - DietPlans
+      operationId: fetchDietPlanTimings
+      responses:
+        200:
+          description: Fetch DietPlans timings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponse'
+
+components:
+  schemas:       
+    SendResponse:  
+      properties:
+       code:
+          type: string
+       message:
+          type: string  
+       messageId:
+          type: string
+    ProfileResponse:  
+      properties:
+       code:
+          type: number
+       message:
+          type: string           
+    KeyValue:  
+      properties:
+       code:
+          type: string
+       value:
+          type: string                 
+    DemographicRequest:  
+      properties:
+       height:
+          type: object
+          properties:
+            unit:
+              type: "string"
+            value:
+              type: "number"        
+       weight:
+          type: object
+          properties:
+            unit:
+              type: "string"
+            value:
+              type: "number"   
+       age:
+          type: object
+          properties:
+            code:
+              type: "string"
+            value:
+              type: "string"        
+    LifestyleRequest:  
+      properties:
+       communities:
+          type: "array"
+          items:
+            type: "string" 
+       diseases:
+          type: "array"
+          items:
+            type: "string" 
+       foodType:
+            type: "string"       
+       ender:
+           type: "string"  
+       stress:
+          type: "string" 
+       comeBack:
+         type: object
+         properties:
+            code:
+              type: "string"
+            value:
+              type: "string"
+            otherValue:
+              type: "string"   
+              
+       alchohal:
+           type: "string"      
+       waterDrink:
+           type: "string"
+       activities:
+          type: object
+          properties:
+            code:
+              type: "string"
+            data:
+              type: number    
+    DietRequest:  
+      properties:
+       food:
+         type: "array"
+         items:
+            type: "string"      
+       drinks:
+         type: "array"
+         items:
+            type: "string"   
+          
+       fruits:
+         type: "array"
+         items:
+            type: "string"  
+          
+       dishes:
+         type: "array"
+         items:
+            type: "string"  
+          
+       rice:
+         type: "array"
+         items:
+            type: "string"   
+        
+       roti:
+         type: "array"
+         items:
+            type: "string" 
+          
+    SendResquest:
+     properties:
+        id:
+          type: string
+          
+    CreateCustmerDietRequest:
+     properties:
+        meals:
+          type: "array"
+          items:
+            type: object
+            properties:
+              code:
+               type: string
+              description:
+               type: string 
+              type:
+                type: string
+        drinks:
+          type: "array"
+          items:
+            type: object
+            properties:
+              code:
+               type: string
+              description:
+               type: string 
+              type:
+                type: string
+    UpdateCustDietPrefRequest:
+     properties:
+        slot:
+          type: number
+        foodCodeList:
+          type: "array"
+          items:
+            type: string
+    UpdateCustDietPrefRequestV2:
+     properties:
+        slot:
+          type: number
+        foodCodeList:
+          type: "array"
+          items:
+           type: object
+           properties:
+             code:
+               type: string
+             portion:
+               type: number                            
+    
+    CreateCustmerHabitRequest:
+      properties:
+        habits:
+          type: "array"
+          items:
+            type: object
+            properties:
+              code:
+               type: string
+              iconUrl:
+               type: string 
+              description:
+               type: string 
+              status:
+               type: string 
+    UpdateCustomerHabitRequest:
+      properties:
+        habits:
+          type: "array"
+          items:
+            type: object
+            properties:
+              code:
+               type: string
+              status:
+               type: string 
+              date:
+               type: string
+    DeleteCustomerHabitRequest:
+        properties:
+          code:
+           type: string
+    UpdateCustomerWeightRequest:
+        properties:
+          weight:
+           type: number       
+
+    DietDetail:
+     properties:
+        code:
+          type: string
+        description:
+          type: string
+    PayemntRequest:
+     properties:
+        amount:
+          type: number
+        couponCode:
+          type: string  
+    ConfirmRequest:
+     properties:
+        razorpay_payment_id:
+          type: string
+        razorpay_signature:
+          type: string
+        razorpay_order_id:
+          type: string 
+        txnId:
+          type: string                   
+    HabitDetail:
+     properties:
+        code:
+          type: string
+        canDelete:
+          type: boolean  
+        iconUrl:
+          type: string 
+        videoUrl:
+          type: string 
+        selected:
+          type: boolean 
+        description:
+          type: string 
+    SendEmail:  
+      properties:
+       email:
+          type: string
+       title:
+          type: string  
+       description:
+          type: string
+
+  securitySchemes:
+   ApiKey:
+    type: apiKey
+    name: Authorization
+    in: header           

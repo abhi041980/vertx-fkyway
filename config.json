@@ -1,0 +1,98 @@
+{
+	"google": {
+		"redirect_uri": "http://localhost:8083/callback",
+		"clinetId": "771972626265-63isvi09ilcbkq9ec0vlt3vsdrhtb25i.apps.googleusercontent.com",
+		"clientSecret": "lfB-cR7W_WmzO5PzI7hAZTx-",
+		"scope": "email profile"
+	},
+	"server": {
+		"host": "0.0.0.0",
+		"port": 8081,
+		"isSecure": false,
+		"certPath": "massigner.jks",
+		"certPassWord": "12345678"
+	},
+	"mongo": {
+		"host": "51.195.196.20",
+		"port": 27017,
+		"username": "fightitaway",
+		"password": "pass@321",
+		"db_name": "fightitaway",
+		"maxPoolSize": 100
+	},
+	"instance": 1,
+	"timeout": 10000,
+	"regId": 25,
+	"paymentId": 22,
+	"manualperiod": 31536000000,
+	"period": 31536000000,
+	"custAnalyticsPeriod": 31536000000,
+	"cacheAnalyticsPeriod": 31536000000,
+	"paymentAnalyticsPeriod": 31536000000,
+	"days": 1,
+	"fetchCustProfilesDays": 30,
+	"isSchedulerRequired": false,
+	"isCustAnalyticsRequired": false,
+	"isCacheAnalyticsRequired": false,
+	"isPaymentAnalyticsRequired": false,
+	"schedulerTime": "00:00:00",
+	"emailsAllowed": 2,
+	"noOfDays": 7,
+	"imageBaseUrl": "http://app.fightitaway.com/images",
+	"adminEmail": "admin@smartdietplanner.com",
+	"pay": {
+		"apiKey": "rzp_live_kKh0sHoMajNYC0",
+		"apiSecret": "ERS36VXjKePAWLbG2XgiODkq"
+	},
+	"slots": [
+		{
+			"slot": 1,
+			"value": "F"
+		},
+		{
+			"slot": 2,
+			"value": "W/WC/WP/WPP/WE/WCP"
+		},
+		{
+			"slot": 3,
+			"value": "W,D/DM"
+		},
+		{
+			"slot": 4,
+			"value": "A/C,B"
+		},
+		{
+			"slot": 5,
+			"value": "D"
+		},
+		{
+			"slot": 6,
+			"value": "W/D"
+		},
+		{
+			"slot": 7,
+			"value": "W/WC/WCP/WE/F/C"
+		},
+		{
+			"slot": 8,
+			"value": "D/DM"
+		}
+	],
+	"admincharges": 100,
+	"freeAccountValidity": 7,
+	"isCacheRequired": false,
+	"siburlv3": "https://api.sendinblue.com/v3/smtp/email",
+	"sibapikeyv3": "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",
+	"emailBodyPostDemographic": "<p>Dear %s,</p><p>We appreciate your acceptance of our terms and conditions (smartdietplanner.com/terms) and registering with our app Smart Diet planner, a <strong>first of its kind solution and a revolutionary way to plan your meals for weight management and lifestyle issues like acidity, BP, Diabetes and Thyroid.</strong></p><p><strong>No more Calories Counting now, like other apps , as 99percentage people ultimately give it up.</strong></p><p><strong>This solution has been created with the team of nutritionists along with digital software professionals. We use the power of Nutrition , circadian rhythm and Artificial intelligence</strong> to create the meal plan recommendations based on following :</p><p>&nbsp; &nbsp; &nbsp;1. Your weight, height and gender<br />&nbsp; &nbsp; &nbsp;2. Your lifestyle &ndash; how much active you are, at what time <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;you wake and what time you prefer to eat<br />&nbsp; &nbsp; &nbsp;3. Your life style diseases if any<br />&nbsp; &nbsp; &nbsp;4. Your food choices<br />&nbsp; &nbsp; &nbsp;5. Calories recommended for you<br />&nbsp; &nbsp; &nbsp;6. Nutrients recommended for you<br />&nbsp; &nbsp; &nbsp;7. circadian rhythm recommendations<br />&nbsp; &nbsp; &nbsp;8. Principles of Nutrition</p><p><strong>We provide you free meal plan along with free trackers for Fasting, water , activities and weight loss progress.</strong> We request you to activate the premium plan of Smart diet planner so as to unlock the actual power of this solution. <strong>With premium plan, you can</strong> :</p><p>&nbsp; &nbsp; 1. <strong>Update the recommend meal plan with your own food</strong><br /><strong>&nbsp; &nbsp; &nbsp; &nbsp; choices</strong> and keep a check on: <br />&nbsp; &nbsp; &nbsp; &nbsp; - the calories budget<br />&nbsp; &nbsp; &nbsp; &nbsp; - recommended nutrients <br />&nbsp; &nbsp; &nbsp; &nbsp; - circadian rhythm recommendations</p><p>&nbsp; &nbsp; 2. Refresh food item in the meal plan with more choices<br />&nbsp; &nbsp; 3. Can know the science behind key mantras and track your<br />&nbsp; &nbsp; &nbsp; &nbsp; progress against each<br />&nbsp; &nbsp; 4. Can view the food item details , its nutrient values and the<br />&nbsp; &nbsp; &nbsp; &nbsp; recipe.</p><p><strong>All this you can do it for as low as Rs 100 to 300 per month</strong> depending on the plan which you will choose. This is a fraction of the cost which you will pay to a dietitian. This is less than cost of a McDonalds Burger or a coffee at your favourite restaurant. <strong>These are our introductory prices at 50percentage discount.</strong></p><p><strong>Best part is that it is totally risk free . If you are NOT satisfied, you can cancel subscription with in 24 hrs and get 100percentage refund. So go ahead and activate the premium plan.</strong></p><p><strong>In case of any issue or any query drop us email at </strong> <a href=\"mailto:admin@smartdietplanner.com\"><strong>admin@smartdietplanner.com</strong></a>. Access the app from smartdietplanner.com/app</strong></p><p><br />Regards-<br />Dr Megha and Smart diet planner team</p>",
+	"emailBodyPostPayment": "<p>Dear %s,</p><p>We appreciate your acceptance of our terms and conditions (smartdietplanner.com/terms) and your&nbsp;decision to activate the premium plan of Smart diet planner to unlock the actual power of this solution.&nbsp;<strong><em>Smart Diet planner is first of its kind solution and a revolutionary way to plan your diet for weight management and lifestyle issues like acidity, BP, Diabetes and Thyroid.</em></strong></p><p><strong>We have received your payment of Rs xxx&nbsp;and your plan will be active till xxx.</strong> You may cancel with in 24 hrs, by sending us an email.</p><p><strong>Now with the premium plan you can :</strong></p><p>&nbsp; &nbsp;1. Update the recommend meal plan with your own food choices and keep a check on:&nbsp;<br />&nbsp; &nbsp;- the calories budget<br />&nbsp; &nbsp;- recommended&nbsp; nutrients<br />&nbsp; &nbsp;-circadian rhythm recommendations</p><p>&nbsp; &nbsp;2. Refresh food item in the diet plan with more choices</p><p>&nbsp; &nbsp;3. Can know the science behind key mantras and view your progress against each</p><p>&nbsp; &nbsp;4. Can view the food item details , its nutrient values&nbsp;and the recipe.</p><p>Our quest is to improve it day by day. So, we are eager for your suggestions and recommendations to improve our solution further.</p><p><strong>In case of any issue or any query or suggestions/recommendations , email us at <a href=\"mailto:admin@smartdietplanner.com\"><strong>admin@smartdietplanner.com</strong></a></p><p><br />Regards-&nbsp;</p><p>Dr Megha and Smart diet planner team</p>",
+	"freeTypeApple": "Freemium",
+	"trialDurationApple": 0,
+	"freeTypeAndroid": "Freemium",
+	"trialDurationAndroid": 0,
+	"isNewPlanTypeActive": false,
+	"planType": "trial:240,Freemium:0",
+	"isPaymentCancelOptionAvailable": false
+}
+
+
+

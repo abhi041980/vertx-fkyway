@@ -1,0 +1,54 @@
+[
+	{
+		"_id": "A",
+		"name": "dry sabzi"
+	},
+	{
+		"_id": "B",
+		"name": "Bread/Rice/chapati"
+	},
+	{
+		"_id": "F",
+		"name": "Fruit"
+	},
+	{
+		"_id": "D",
+		"name": "Drink"
+	},
+	{
+		"_id": "S",
+		"name": "seconday"
+	},
+	{
+		"_id": "c",
+		"name": "curry"
+	},
+	{
+		"_id": "w",
+		"name": "whole meals"
+	},
+	{
+		"_id": "WP",
+		"name": "Whole meal-Prantha"
+	},
+	{
+		"_id": "WC",
+		"name": "Whole meal -Chila"
+	},
+	{
+		"_id": "WPP",
+		"name": "Whole meal-Prantha- with high protien"
+	},
+	{
+		"_id": "DM",
+		"name": "Drinks with milk"
+	},
+	{
+		"_id": "SM",
+		"name": "Seconday with milk"
+	},
+	{
+		"_id": "WCP",
+		"name": "Whole meal -Chila with high protine"
+	}
+]

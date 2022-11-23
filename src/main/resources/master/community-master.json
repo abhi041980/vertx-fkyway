@@ -1,0 +1,38 @@
+[
+	{
+		"_id": "1",
+		"name": "Punjabi"
+	},
+	{
+		"_id": "2",
+		"name": "Gujrati"
+	},
+	{
+		"_id": "3",
+		"name": "Mahrashtrian"
+	},
+	{
+		"_id": "4",
+		"name": "Baniyas"
+	},
+	{
+		"_id": "5",
+		"name": "Continental"
+	},
+	{
+		"_id": "6",
+		"name": "Chines"
+	},
+	{
+		"_id": "7",
+		"name": "Karnataka"
+	},
+	{
+		"_id": "8",
+		"name": "Jain"
+	},
+	{
+		"_id": "9",
+		"name": "Bihar"
+	}
+]

@@ -1,0 +1,5 @@
+mongod --auth -f /etc/mongodb.conf
+
+scp  -i tasker_new.pem /Users/b56521/fightitaway/fightitaway-api/target/fightitaway-1.0-fat.jar ubuntu@ec2-34-209-64-202.us-west-2.compute.amazonaws.com:/home/ubuntu/fightitaway
+
+ssh  -vvv -i tasker_new.pem ubuntu@ec2-34-209-64-202.us-west-2.compute.amazonaws.com

@@ -1,0 +1,251 @@
+---
+
+openapi: 3.0.0  
+info:
+  title: Playpen API
+  description: Scan & Pay Playpen API
+  version: 1.0.0
+paths:
+  /authenticate:
+    post:
+      x-vertx-event-bus:
+       address: auth.service
+       timeout: 1000
+       method: login
+      summary: Authenticate User
+      tags:
+        - Authenticate
+      operationId: authenticate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+        required: true
+      responses:
+        200:
+          description: User Login success full
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+  /loginWithRib:
+    post:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: login
+      summary: Login With RIB
+      tags:
+        - RIB
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequest'
+        required: true
+      responses:
+        200:
+          description: User Login success full
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'             
+  /eai/validateQRcode:
+    post:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: validateQrcode
+      summary: validateQrcode
+      tags:
+        - EAI
+      operationId: validateQrcode
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ValidateQRcodeRequest'
+        required: true
+      responses:
+        200:
+          description: User Login success full
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse' 
+  /rib/getQRcode:
+    post:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: getQRcodeString
+      summary: getQRcodeString
+      tags:
+        - RIB
+      operationId: getQRcodeString
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetQRcodeRequest'
+        required: true
+      responses:
+        200:
+          description: User Login success full
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse' 
+  /rib/getAccounts:
+    post:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: getAccounts
+      summary: getAccounts
+      tags:
+        - RIB
+      operationId: getAccounts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetQRAccount'
+        required: true
+      responses:
+        200:
+          description: User Login success full
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'  
+
+  /rib/validateQRcode:
+    get:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 120000
+       method: validateQRcodeFromRib
+      summary: validateQRcodeFromRib
+      tags:
+      - "RIB"
+      operationId: "validateQRcodeFromRib"
+      parameters:
+      - name: "version"
+        in: "query"
+        required: false
+
+      responses:
+        200:
+          description: "successful operation"
+          content:
+            text/xml:
+               schema:
+                  type: "string"  
+
+
+  /testRest:
+    get:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: testRest
+      summary: testRest
+      tags:
+      - "ZUtils  Resource"
+      operationId: "testRest"
+      parameters:
+      - name: "version"
+        in: "query"
+        required: false
+
+      responses:
+        200:
+          description: "successful operation"
+          content:
+            text/xml:
+               schema:
+                  type: "string"
+  /testSoap:
+    get:
+      x-vertx-event-bus:
+       address: rsa.service
+       timeout: 60000
+       method: testSoap
+      summary: testSoap
+      tags:
+      - "ZUtils  Resource"
+      operationId: "testSoap"
+      parameters:
+      - name: "name"
+        in: "query"
+      - name: "url"
+        in: "query"  
+        required: true
+
+      responses:
+        200:
+          description: "successful operation"
+          content:
+            text/xml:
+               schema:
+                  type: "string"                
+
+
+                                                                     
+components:
+  schemas:       
+    AuthResponse:  
+      properties:
+       data:
+         $ref: '#/components/schemas/AuthData' 
+       responseCode:
+          type: string
+       responseMessage:
+          type: string  
+           
+    AuthRequest:
+     required:
+      - loginId
+      - password
+     properties:
+        loginId:
+          type: string
+        password:
+          type: string 
+    AuthData:
+     properties:
+        token:
+          type: string
+      
+    ValidateQRcodeRequest:
+     required:
+      - qrString
+     properties:
+        qrString:
+          type: string 
+    GetQRcodeRequest:
+     required:
+      - accountNumber
+      - loginId
+     properties:
+        accountNumber:
+          type: string 
+        loginId:
+          type: string   
+    GetQRAccount:
+     required:
+      - loginId
+     properties:
+        loginId:
+          type: string                         
+                        
+  securitySchemes:
+   ApiKey:
+    type: apiKey
+    name: Authorization
+    in: header           
+          
+   

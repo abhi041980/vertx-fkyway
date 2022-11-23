@@ -1,0 +1,721 @@
+{  "_id":"v1",
+  "demographic": {
+    "height": [],
+    "weight": [],
+    "age": {
+      "data": [
+        {
+          "name1": "18 to 22 years",
+          "isSelected1": false,
+          "name2": "23 to 27 years",
+          "isSelected2": false
+        },
+        {
+          "name1": "28 to 35 years",
+          "isSelected1": false,
+          "name2": "35 to 40 years",
+          "isSelected2": false
+        },
+        {
+          "name1": "40 to 45 years",
+          "isSelected1": false,
+          "name2": "45 to 50 years",
+          "isSelected2": false
+        },
+        {
+          "name1": "50 to 55 years",
+          "isSelected1": false,
+          "name2": "55 to 60 years",	
+          "isSelected2": false
+        },
+        {
+          "name1": "60 to 65 years",
+          "isSelected1": false,
+          "name2": "65 to 70 years",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 1,
+        "required": true
+      }
+    },
+    "think": []
+  },
+  "lifeStyle": {
+    "single": [
+      {
+        "name1": "Housewife",
+        "isSelected": false
+      },
+      {
+        "name1": "Working from Home",
+        "isSelected": false
+      },
+      {
+        "name1": "Office",
+        "isSelected": false
+      },
+      {
+        "name1": "Shop going",
+        "isSelected": false
+      }
+    ],
+    "healths": {
+      "data": [
+        {
+          "name1": "High BP",
+          "isSelected1": false,
+          "name2": "Diabetes Type 1",
+          "isSelected2": false
+        },
+        {
+          "name1": "Diabetes Type 2",
+          "isSelected1": false,
+          "name2": "Diabetes Type 3",
+          "isSelected2": false
+        },
+        {
+          "name1": "High Cholesterol",
+          "isSelected1": false,
+          "name2": "Digestion problem",
+          "isSelected2": false
+        },
+        {
+          "name1": "Irritant bowel syndrome",
+          "isSelected1": false,
+          "name2": "Uric acid",
+          "isSelected2": false
+        },
+        {
+          "name1": "Kidney problem",
+          "isSelected1": false,
+          "name2": "Fatty lever",
+          "isSelected2": false
+        },
+        {
+          "name1": "High Spgt level",
+          "isSelected1": false,
+          "name2": "Acidity",
+          "isSelected2": false
+        },
+        {
+          "name1": "Gas",
+          "isSelected1": false,
+          "name2": "Bloating",
+          "isSelected2": false
+        },
+        {
+          "name1": "Pcod",
+          "isSelected1": false,
+          "name2": "Thyroid",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "marital": [
+      {
+        "name1": "Married  with Kids",
+        "isSelected": false
+      },
+      {
+        "name1": "Married but no Kids",
+        "isSelected": false
+      },
+      {
+        "name1": "Bachelor",
+        "isSelected": false
+      }
+    ],
+    "stress": [
+      {
+        "name1": "Yes, Most of the time",
+        "isSelected": false
+      },
+      {
+        "name1": "Yes, Occasional",
+        "isSelected": false
+      },
+      {
+        "name1": "None",
+        "isSelected": false
+      }
+    ],
+    "activities": [
+      {
+        "name1": "Low- Sedentary lifestyle",
+        "isSelected": false
+      },
+      {
+        "name1": "Intermediate- Walking 2 to 5K steps",
+        "isSelected": false
+      },
+      {
+        "name1": "Active- 5  to 10 K steps",
+        "isSelected": false
+      },
+      {
+        "name1": "Very Active- Cardiac and weight",
+        "isSelected": false
+      },
+      {
+        "name1": "training",
+        "isSelected": false
+      }
+    ],
+    "wakeup": {
+      "data": [
+        {
+          "name1": "Before 4:00 AM",
+          "isSelected1": false,
+          "name2": "4:00 - 5:00 AM",
+          "isSelected2": false
+        },
+        {
+          "name1": "5:00 - 6:00 AM",
+          "isSelected1": false,
+          "name2": "6:00 - 7:00 AM",
+          "isSelected2": false
+        },
+        {
+          "name1": "7:00 - 8:00 AM",
+          "isSelected1": false,
+          "name2": "8:00 - 9:00 AM",
+          "isSelected2": false
+        },
+        {
+          "name1": "9:00 - 10:00 AM",
+          "isSelected1": false,
+          "name2": "10:00 - 11:00 AM",
+          "isSelected2": false
+        },
+        {
+          "name1": "After 11:00 AM",
+          "isSelected1": false,
+          "name2": "Other",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 1,
+        "required": true,
+        "maxMsg": "You can select 1"
+      }
+    },
+    "sleep": {
+      "data": [
+        {
+          "name1": "8:00 - 9:00 PM",
+          "isSelected1": false,
+          "name2": "9:00 - 10:00 PM",
+          "isSelected2": false
+        },
+        {
+          "name1": "10:00 - 11:00 PM",
+          "isSelected1": false,
+          "name2": "11:00 - 12:00 PM",
+          "isSelected2": false
+        },
+        {
+          "name1": "12:00 - 1:00 AM",
+          "isSelected1": false,
+          "name2": "Other",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 1,
+        "required": true,
+        "maxMsg": "You can select 1"
+      }
+    },
+    "sleepType": [
+      {
+        "name1": "Sound sleep",
+        "isSelected": false
+      },
+      {
+        "name1": "Disturbed most of time",
+        "isSelected": false
+      },
+      {
+        "name1": "Partially disturbed",
+        "isSelected": false
+      }
+    ],
+    "leaveForOffice": [
+      {
+        "name1": "7:00 AM - 8:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "8:00 AM - 9:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "9:00 AM - 10:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "10:00 AM - 11:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "11:00 AM - 12:00 PM",
+        "isSelected": false
+      },
+      {
+        "name1": "Other"
+      }
+    ],
+    "comeBack": [
+      {
+        "name1": "7:00 AM - 8:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "8:00 AM - 9:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "9:00 AM - 10:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "10:00 AM - 11:00 AM",
+        "isSelected": false
+      },
+      {
+        "name1": "11:00 AM - 12:00 PM",
+        "isSelected": false
+      },
+      {
+        "name1": "Other",
+        "isSelected": false
+      }
+    ],
+    "community": [
+      {
+        "name1": "Punjabi",
+        "isSelected": false
+      },
+      {
+        "name1": "Tamil",
+        "isSelected": false
+      },
+      {
+        "name1": "Kannad",
+        "isSelected": false
+      },
+      {
+        "name1": "UP",
+        "isSelected": false
+      },
+      {
+        "name1": "Gujrati",
+        "isSelected": false
+      },
+      {
+        "name1": "Marathi",
+        "isSelected": false
+      },
+      {
+        "name1": "Haryana",
+        "isSelected": false
+      },
+      {
+        "name1": "Others",
+        "isSelected": false
+      }
+    ],
+    "foodPref": [
+      {
+        "name1": "Veg",
+        "isSelected": false
+      },
+      {
+        "name1": "Non Veg",
+        "isSelected": false
+      },
+      {
+        "name1": "Veg+Egg",
+        "isSelected": false
+      }
+    ],
+    "alchohal": [
+      {
+        "name1": "None",
+        "isSelected": false
+      },
+      {
+        "name1": "Once in a month",
+        "isSelected": false
+      },
+      {
+        "name1": "Once in a week",
+        "isSelected": false
+      },
+      {
+        "name1": "Two to 3 times a day",
+        "isSelected": false
+      },
+      {
+        "name1": "Daily",
+        "isSelected": false
+      }
+    ],
+    "waterDrink": [
+      {
+        "name1": "3 to 4 glass",
+        "isSelected": false
+      },
+      {
+        "name1": "5 to 7",
+        "isSelected": false
+      },
+      {
+        "name1": "8 to 10",
+        "isSelected": false
+      },
+      {
+        "name1": "10 to 12",
+        "isSelected": false
+      },
+      {
+        "name1": "More than 12",
+        "isSelected": false
+      }
+    ]
+  },
+  "diet": {
+    "food": [
+      {
+        "name1": "Traditional",
+        "isSelected": false
+      },
+      {
+        "name1": "South Indian",
+        "isSelected": false
+      },
+      {
+        "name1": "Punjabi",
+        "isSelected": false
+      },
+      {
+        "name1": "Continental",
+        "isSelected": false
+      }
+    ],
+    "drinks": {
+      "data": [
+        {
+          "name1": "Buttermilk",
+          "isSelected1": false,
+          "name2": "Tea",
+          "isSelected2": false
+        },
+        {
+          "name1": "Coffee",
+          "isSelected1": false,
+          "name2": "Milk",
+          "isSelected2": false
+        },
+        {
+          "name1": "Filter coffee",
+          "isSelected1": false,
+          "name2": "Green tea",
+          "isSelected2": false
+        },
+        {
+          "name1": "Black tea",
+          "isSelected1": false,
+          "name2": "Black coffee",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "snacks": {
+      "data": [
+        {
+          "name1": "Buttermilk",
+          "isSelected1": false,
+          "name2": "Tea",
+          "isSelected2": false
+        },
+        {
+          "name1": "Coffee",
+          "isSelected1": false,
+          "name2": "Milk",
+          "isSelected2": false
+        },
+        {
+          "name1": "Filter coffee",
+          "isSelected1": false,
+          "name2": "Green tea",
+          "isSelected2": false
+        },
+        {
+          "name1": "Black tea",
+          "isSelected1": false,
+          "name2": "Black coffee",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "fruits": {
+      "data": [
+        {
+          "name1": "Apple",
+          "isSelected1": false,
+          "name2": "Banana",
+          "isSelected2": false
+        },
+        {
+          "name1": "Kiwi",
+          "isSelected1": false,
+          "name2": "Grapes",
+          "isSelected2": false
+        },
+        {
+          "name1": "Water melon",
+          "isSelected1": false,
+          "name2": "Musk melon",
+          "isSelected2": false
+        },
+        {
+          "name1": "Cherries",
+          "isSelected1": false,
+          "name2": "Litchi",
+          "isSelected2": false
+        },
+        {
+          "name1": "Mango",
+          "isSelected1": false,
+          "name2": "Cheechoo",
+          "isSelected2": false
+        },
+        {
+          "name1": "Papaya",
+          "isSelected1": false,
+          "name2": "Strawberries",
+          "isSelected2": false
+        },
+        {
+          "name1": "Pears",
+          "isSelected1": false,
+          "name2": "Guava",
+          "isSelected2": false
+        },
+        {
+          "name1": "Orange",
+          "isSelected1": false,
+          "name2": "Orange",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "dishes": {
+      "data": [
+        {
+          "name1": "Apple",
+          "isSelected1": false,
+          "name2": "Banana",
+          "isSelected2": false
+        },
+        {
+          "name1": "Kiwi",
+          "isSelected1": false,
+          "name2": "Grapes",
+          "isSelected2": false
+        },
+        {
+          "name1": "Water melon",
+          "isSelected1": false,
+          "name2": "Musk melon",
+          "isSelected2": false
+        },
+        {
+          "name1": "Cherries",
+          "isSelected1": false,
+          "name2": "Litchi",
+          "isSelected2": false
+        },
+        {
+          "name1": "Mango",
+          "isSelected1": false,
+          "name2": "Cheechoo",
+          "isSelected2": false
+        },
+        {
+          "name1": "Papaya",
+          "isSelected1": false,
+          "name2": "Strawberries",
+          "isSelected2": false
+        },
+        {
+          "name1": "Pears",
+          "isSelected1": false,
+          "name2": "Guava",
+          "isSelected2": false
+        },
+        {
+          "name1": "Orange",
+          "isSelected1": false,
+          "name2": "Orange",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "pules": {
+      "data": [
+        {
+          "name1": "Apple",
+          "isSelected1": false,
+          "name2": "Banana",
+          "isSelected2": false
+        },
+        {
+          "name1": "Kiwi",
+          "isSelected1": false,
+          "name2": "Grapes",
+          "isSelected2": false
+        },
+        {
+          "name1": "Water melon",
+          "isSelected1": false,
+          "name2": "Musk melon",
+          "isSelected2": false
+        },
+        {
+          "name1": "Cherries",
+          "isSelected1": false,
+          "name2": "Litchi",
+          "isSelected2": false
+        },
+        {
+          "name1": "Mango",
+          "isSelected1": false,
+          "name2": "Cheechoo",
+          "isSelected2": false
+        },
+        {
+          "name1": "Papaya",
+          "isSelected1": false,
+          "name2": "Strawberries",
+          "isSelected2": false
+        },
+        {
+          "name1": "Pears",
+          "isSelected1": false,
+          "name2": "Guava",
+          "isSelected2": false
+        },
+        {
+          "name1": "Orange",
+          "isSelected1": false,
+          "name2": "Orange",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "rice": {
+      "data": [
+        {
+          "name1": "Eat occasionally",
+          "isSelected1": false,
+          "name2": "Eat in 1 to 2 meals",
+          "isSelected2": false
+        },
+        {
+          "name1": "Eat in 2 to 3 meals",
+          "isSelected1": false,
+          "name2": "",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "roti": {
+      "data": [
+        {
+          "name1": "Eat occasionally",
+          "isSelected1": false,
+          "name2": "Eat in 1 to 2 meals",
+          "isSelected2": false
+        },
+        {
+          "name1": "Eat in 2 to 3 meals",
+          "isSelected1": false,
+          "name2": "",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 3,
+        "required": true,
+        "maxMsg": "You can Select max 3"
+      }
+    },
+    "dinner": {
+      "data": [
+        {
+          "name1": "Can adjust for any healthy meal",
+          "isSelected1": false,
+          "name2": "Rice/Chapati along with dal/sabzi",
+          "isSelected2": false
+        }
+      ],
+      "validation": {
+        "min": 1,
+        "max": 2,
+        "required": true,
+        "maxMsg": "You can Select max 2"
+      }
+    }
+  }
+}
